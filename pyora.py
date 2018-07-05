@@ -556,7 +556,6 @@ class Main(Checks):
                 
                 p.set_defaults(func=method, argnames=argnames)
         self.args = parser.parse_args()
-        #print(self.args)
 
     def db_connect(self):
         a = self.args
@@ -565,8 +564,6 @@ class Main(Checks):
         address = a.address
         database = a.database
         port = a.port
-        #print("{0}/{1}@{2}:{3}/{4}".format(
-        #    username, password, address, port, database))
         self.db = cx_Oracle.connect("{0}/{1}@{2}:{3}/{4}".format(
             username, password, address, port, database))
         self.cur = self.db.cursor()
@@ -581,7 +578,6 @@ class Main(Checks):
             callargs = [getattr(a, name) for name in a.argnames]
             self.db_connect()
             try:
-            #    pass
                 return self.args.func(*callargs)
             finally:
                 self.db_close()
