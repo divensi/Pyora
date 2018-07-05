@@ -1,4 +1,4 @@
-Pyora
+Pyora Py3
 =====
 
 Python script to monitor oracle
@@ -11,7 +11,7 @@ python-argparse
 
 Note:Try installing python-argparse: `easy_install argparse`  or  `yum install python-argarse` on RHEL/Centos.
 
-Tested with python 2.6 and 2.7
+Updated for Python 3
 
 Create Oracle user for Pyora usage
 =====
